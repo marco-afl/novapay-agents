@@ -63,14 +63,15 @@ A human must explicitly approve at two gates: before coding starts, and before t
 
 ### Phase 1 — Pre-flight Preview
 
-1. Read `specs/plans/PLAN-{number}.md` in full.
-2. Read the linked story from `specs/stories/` to understand acceptance criteria.
-3. Scan `src/` for existing conventions: naming style, module structure, test patterns, error handling idioms.
-4. Derive:
+1. Read `CLAUDE.md` at the root of the target repository to understand the project's coding conventions, architecture guidelines, and any constraints defined there. This is mandatory and must happen before reading any source file.
+2. Read `specs/plans/PLAN-{number}.md` in full.
+3. Read the linked story from `specs/stories/` to understand acceptance criteria.
+4. Scan `src/` for existing conventions: naming style, module structure, test patterns, error handling idioms.
+5. Derive:
    - **Branch name**: `feature/plan-{number}-{slug}` (slug from plan filename, lowercased, hyphens)
    - **Task list**: tasks in the execution order from the plan
    - **Files to create or modify**: your best prediction based on plan + existing conventions
-5. Present the preview **in the conversation**:
+6. Present the preview **in the conversation**:
 
    ```
    PRE-FLIGHT — Code Agent preview for PLAN-{number}
@@ -96,7 +97,7 @@ A human must explicitly approve at two gates: before coding starts, and before t
      "cancel"             → stop
    ```
 
-6. Stop. Do not create a branch or write any file. Do not continue without a reply.
+7. Stop. Do not create a branch or write any file. Do not continue without a reply.
 
 If the reply is `"revise: ..."`, incorporate the feedback into the preview and repeat step 5.
 If the reply is `"cancel"`, output `Code Agent stopped. No changes made.` and stop.

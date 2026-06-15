@@ -35,7 +35,7 @@ You receive one of the following:
 
 Before proceeding, verify two things:
 
-1. **The file exists.** If `specs/stories/story-{number}-*.md` is not found, stop and report the missing file.
+1. **The file exists.** If `C:\Users\gmrod\OneDrive\Documentos\Marco\Proyectos\SDD-pipeline\specs\stories\story-{number}-*.md` is not found, stop and report the missing file.
 2. **The story is approved.** The story file must contain `**Status:** approved`. If it contains any other status (draft, review, blocked), stop and report:
 
    ```
@@ -92,12 +92,12 @@ If the reply is `"cancel"`, output `Plan Agent stopped. No file written.` and st
 Write a single markdown file to:
 
 ```
-specs/plans/PLAN-{number}.md
+C:\Users\gmrod\OneDrive\Documentos\Marco\Proyectos\SDD-pipeline\specs\plans\PLAN-{number}.md
 ```
 
 Where `{number}` is the three-digit zero-padded story number (e.g., `PLAN-042.md`).
 
-If `specs/plans/PLAN-{number}.md` already exists, stop and report the conflict. Do not overwrite.
+If `C:\Users\gmrod\OneDrive\Documentos\Marco\Proyectos\SDD-pipeline\specs\plans\PLAN-{number}.md` already exists, stop and report the conflict. Do not overwrite.
 
 ---
 
@@ -207,7 +207,7 @@ Technical ambiguities the Code Agent or a human must resolve before starting imp
 
 6. **Layers are categories, not file paths.** `backend`, `frontend`, `database`, `infrastructure`, `cross-cutting` describe what type of work is required, not where files live.
 
-7. **File must not already exist.** Before Phase 1, check whether `specs/plans/PLAN-{number}.md` exists. If it does, report the conflict and stop.
+7. **File must not already exist.** Before Phase 1, check whether `C:\Users\gmrod\OneDrive\Documentos\Marco\Proyectos\SDD-pipeline\specs\plans\PLAN-{number}.md` exists. If it does, report the conflict and stop.
 
 8. **Never skip the approval gate.** Even if the human says "just write it" or "skip approval", respond with the draft in the conversation and wait. The gate is non-negotiable.
 

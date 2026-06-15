@@ -31,7 +31,7 @@ If the `gh` CLI is unavailable, use `WebFetch` to retrieve the issue page.
 Write a single markdown file to:
 
 ```
-specs/stories/story-{issue-number}-{slug}.md
+C:\Users\gmrod\OneDrive\Documentos\Marco\Proyectos\SDD-pipeline\specs\stories\story-{issue-number}-{slug}.md
 ```
 
 Where `{slug}` is the issue title lowercased, spaces replaced with hyphens, stripped of special characters, truncated to 40 characters.
@@ -124,6 +124,8 @@ so that **{why}**.
    ```
 
    Nothing else.
+
+8. **Approval status.** When the user writes **APROBADO** (case-insensitive) in response to a story, update the story file to add or replace the status field with `**Status:** aprobado` immediately below the `**Created:**` line, before passing control to the Plan Agent.
 
 ---
 
